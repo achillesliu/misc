@@ -21,9 +21,9 @@ So "get the devel branch and the problem would be solved", I was thinking at tha
 But some were learnt,
 1. CSS settings to specific type on the website. It's kind of dictionary structure.
 2. User preference in sublime text 3 are stored in the `/Users/liubo/Library/Application Support/Sublime Text 3/Packages/User`. Below files are all included. Possibly the future package preference would be stored here.
-    - Key binding
-    - User preference
-    - User preference of packages
+  * Key binding
+  * User preference
+  * User preference of packages
 
 
 
