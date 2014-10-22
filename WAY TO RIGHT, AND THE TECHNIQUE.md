@@ -19,6 +19,7 @@ There I just met the same question! The extension maker had already solved the p
 So "get the devel branch and the problem would be solved", I was thinking at that time. But it was far from the truth. I spend about another hour on the "simple" process. The final mistake that I made was, the wrong directory!!!
 
 But some were learnt,
+
 1. CSS settings
   * to specific type on the website
   * structure is kind of dictionary in Python
@@ -31,4 +32,5 @@ But some were learnt,
 
 
 ac
+
 2014-10-22
