@@ -19,20 +19,16 @@ There I just met the same question! The extension maker had already solved the p
 So "get the devel branch and the problem would be solved", I was thinking at that time. But it was far from the truth. I spend about another hour on the "simple" process. The final mistake that I made was, the wrong directory!!!
 
 But some were learnt,
-1. CSS settings to specific type on the website. It's kind of dictionary structure.
-2. User preference in sublime text 3 are stored in the `/Users/liubo/Library/Application Support/Sublime Text 3/Packages/User`. Below files are all included. Possibly the future package preference would be stored here.
+1. CSS settings
+  * to specific type on the website
+  * structure is kind of dictionary in Python
+2. About the user preference
+  * stored in `/Users/liubo/Library/Application Support/Sublime Text 3/Packages/User`
   * Key binding
   * User preference
   * User preference of packages
+  * Possibly the future package preference would be stored here
 
 
-
-
-
-
-
-
-
-
-
-
+ac
+2014-10-22
