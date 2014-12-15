@@ -1,0 +1,47 @@
+## 在histogram外画一个拟合的曲线，(best) fit line
+
+1. Histogram for parrallel in matplotlib.
+2. Fit line over histogram.
+
+----
+Method of histogram for parrallel/multi data is not easy to make. It seems that people like to use stack histogram more than parrallel. So there's few paths to follow.
+
+The only entry point is that Matlab uses matrix to plot parrallel histogram. So in matplotlib you can do the same. And matplotlib does not require same length vectors.
+
+However, the normalization problem is more complex, because in the hist funtion in matplotlib, the `normed` parameter is not designed for parrallel/multi data. This parameter is designed to make the integral of the histogram equals 1. But 2 problems raised in this condition.
+
+1. I have parrallel/multi data. So I want each histogram(they stay in one plot, for the purpose of comparision) was independently normed. But from the document, I can't say that it is what I want.
+2. The integral of the histogram is not intuitive. The integral uses data on x-axis. But normalization in terms of bins count makes it more easy to understand. So this `normed` parameter is not good when comparing parrallel/multi data.
+
+'weights' parameter solved the problem partly. You can find an example [here](http://stackoverflow.com/questions/3866520/plotting-histograms-whose-bar-heights-sum-to-1-in-matplotlib). The normalization according to counts of bins can be done. But fitting lines not. So we have to go further.
+
+----
+Here I provide a path solve the problem. But it is not the only way. I'm not sure it's a good way.
+
+First, an unified bins should be obtained for parrallel data. `plt.hist` method can be used.
+
+Then for each vector of the parrallel data, get bins count according to the bins. Use `numpy.histogram`, and parameter `density` is assigned `True`. This also makes the integral of histogram to 1. But we can multiply the bins count by the single bin width to achieve that sum of bins count equals to 1. Moreover, the `numpy.histogram` does not plot a figure. It only produce the bins count.
+
+Now I get single bin width, bins count, and bins range(min and max of the data, and how they are divided into bins). I can use `plt.bar` to plot.
+
+----
+Last task, fit line.
+
+At first, I commit my old trouble that I am always thinking too much. While this is just a simple use to get an intuitive view of the data. So when I realised this, the problems is solved in a sufficient sense.
+
+You can find [an example](http://stackoverflow.com/questions/7805552/fitting-a-histogram-with-python) which clearly show how to do it. Maybe the data is not distributed normally, but in this not-to-high standard it's enough.
+
+----
+All done. The result figure will come soon. 
+
+
+
+
+
+
+
+
+
+
+
+
