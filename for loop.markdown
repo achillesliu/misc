@@ -10,6 +10,7 @@ for book in books:
 ```
 
 That is so easy! 
+
 1. List definition before the list
 2. Properties are turned into dict
 3. Then the dict is appended to the list
