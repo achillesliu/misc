@@ -7,7 +7,7 @@ You can also test code at the end of this article. But I recommand [regex101.com
 
 ###################################
 # This is the regex expression
-`(?<!ca.)(?<!vs.)(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<![A-Z][a-z][a-z]\.)(?<![A-Z][a-z][a-z][a-z]\.)((?<=[.!?])|(?<=[.!?][\'"]))[\s]{1,20}((?=[A-Z])|(?=[0-9])|(?=\"))`
+`(?<!ca.)(?<!vs.)(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<![A-Z][a-z][a-z]\.)(?<![A-Z][a-z][a-z][a-z]\.)((?<=[.!?])|(?<=[.!?][\'"])|(?<=\...)|(?<=\....))[\s]{1,20}((?=[A-Z])|(?=[0-9])|(?=\"))`
 
 ## Raw text:
 "
@@ -39,7 +39,7 @@ I got 5 matches which are
 . `(?<![A-Z][a-z]\.)`  #such as Mr.
 . `(?<![A-Z][a-z][a-z])` #such as Mrs., Sir.
 . `(?<![A-Z][a-z][a-z][a-z])` #such as Prof.
-. `((?<=[.!?])|(?<=[.!?][\'"]))`  #sentence ends with ".!?" and quotes
+. `((?<=[.!?])|(?<=[.!?][\'"])|(?<=\...)|(?<=\....))`  #sentence ends with ".!?" ,".!?" with quotes, and ellipsis.
 . `[\s]{1,20}`  #empty space.Taking into account for unregular text, allow it to happen more than one time, up to 20.
 . `((?=[A-Z])|(?=[0-9])|(?=\"))`  #match the next sentence's beginning
 
