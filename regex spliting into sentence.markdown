@@ -33,20 +33,20 @@ I got 5 matches which are
 5. pear etc. "Oh God!"
 
 # Explaination
-. `(?<!ca.)`  #exception: ca.(German)
-. `(?<!vs.)`  #exception: vs.
-. `(?<!\w\.\w.)`  #short names: U.S.
-. `(?<![A-Z][a-z]\.)`  #such as Mr.
-. `(?<![A-Z][a-z][a-z])` #such as Mrs., Sir.
-. `(?<![A-Z][a-z][a-z][a-z])` #such as Prof.
-. `((?<=[.!?])|(?<=[.!?][\'"])|(?<=\...)|(?<=\....))`  #sentence ends with ".!?" ,".!?" with quotes, and ellipsis.
-. `[\s]{1,20}`  #empty space.Taking into account for unregular text, allow it to happen more than one time, up to 20.
-. `((?=[A-Z])|(?=[0-9])|(?=\"))`  #match the next sentence's beginning
+* `(?<!ca.)`  #exception: ca.(German)
+* `(?<!vs.)`  #exception: vs.
+* `(?<!\w\.\w.)`  #short names: U.S.
+* `(?<![A-Z][a-z]\.)`  #such as Mr.
+* `(?<![A-Z][a-z][a-z])` #such as Mrs., Sir.
+* `(?<![A-Z][a-z][a-z][a-z])` #such as Prof.
+* `((?<=[.!?])|(?<=[.!?][\'"])|(?<=\...)|(?<=\....))`  #sentence ends with ".!?" ,".!?" with quotes, and ellipsis.
+* `[\s]{1,20}`  #empty space.Taking into account for unregular text, allow it to happen more than one time, up to 20.
+* `((?=[A-Z])|(?=[0-9])|(?=\"))`  #match the next sentence's beginning
 
 # Explaination of regex syntax
-. `(?<!)`, negative look behind, means that it is not possible to match patterns inside the bracket.
-. `(?<=)`, positive look behind, means that patterns inside bracket can be matched.
-. `(?=)`, positive look ahead, mean that patterns inside bracket can be matched.
+* `(?<!)`, negative look behind, means that it is not possible to match patterns inside the bracket.
+* `(?<=)`, positive look behind, means that patterns inside bracket can be matched.
+* `(?=)`, positive look ahead, mean that patterns inside bracket can be matched.
 
 # Code of example
 ```python
