@@ -1,0 +1,16 @@
+## First Kaggle Project
+
+Today the first kaggle project was done with the help of tutorial. It was long at the first saught but really short after I finished it.
+
+The simple understanding of the process can be stated as, 
+
+1. Clean the data,
+2. Put the cleaned data into machine learning algorithm.
+
+The second step is "easy" to me since I just use the funtion in scikit-learn. So all the time is spent in cleaning the data.
+
+1. Get a first view of the columns that you have. Make assumptions of how they will work towards the prediction results. These assumptions are useful when you fillin and drop data.
+2. Do some exploration work, it will lead to a more intuitive understanding of the data.
+3. Map category data(corresponding to qualitative data) into integers.
+4. Fillin the data.
+5. Make some additional feature engineering. These additionals are based on the assumptions and explorations. It can feed more information for the training algorithm. So be creative!
